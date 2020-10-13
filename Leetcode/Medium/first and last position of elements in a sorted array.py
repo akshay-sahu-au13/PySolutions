@@ -1,9 +1,9 @@
-### https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+#### https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/submissions/
 
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:        
+    def searchRange(self, nums: List[int], target: int) -> List[int]:   
 
-#         first = -1
+        #         first = -1
 #         last = -1
 #          ## For first position
 #         left = 0
@@ -36,26 +36,7 @@ class Solution:
 #         return(first,last)
 
 ###########################PRACTICE#########################
-#         first = -1
-#         last = -1
-#         l = 0
-#         r = len(nums)-1
-        
-#         while l <= r:
-#             mid = (l+r)/2
-            
-#             if nums[mid] == target:
-#                 return mid
-#                 r = mid-1
-            
-#             if nums[mid] < target:
-#                 l = mid+ 1
-            
-#             else:
-#                 r = mid -1
-                
-        
-        
+
         
 # ## Using for loop
 # class Solution:
@@ -74,7 +55,8 @@ class Solution:
 #                 break
             
 #         return [l,r]
-    
+
+#### Ravi's method ####   
         start = 0; 
         end = len(nums)-1
         
@@ -93,7 +75,3 @@ class Solution:
                 if nums[start] != target: start += 1
                 if nums[end] != target: end -= 1
         return [-1,-1]
-
-        
-                
-        
