@@ -8,7 +8,6 @@ def InsertionSort(arr):
         j = i-1
         while j >= 0 and key < arr[j]:
             arr[j+1] = arr[j]
-            arr[j] = key
             j -= 1
         arr[j+1] = key  
 
