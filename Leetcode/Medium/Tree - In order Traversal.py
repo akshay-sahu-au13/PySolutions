@@ -20,4 +20,4 @@ class Solution:
         self.lst.append(root.val)
         self.inorderTraversal(root.right)
         
-        return self.lst
+        return self.lst 
