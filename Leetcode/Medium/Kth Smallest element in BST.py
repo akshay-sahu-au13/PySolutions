@@ -22,4 +22,18 @@ class Solution:
         self.temp.append(root.val)
         self.inorder(root.right)
        
-        
+######## ANOTHER APPROACH WITH BETTER RUNTIME ######
+
+class Solution:
+    def kthSmallest(self, root: TreeNode, k: int) -> int:
+        ans, stack = [], [(root, False)]
+        while stack and len(ans)<k:
+            node, visited = stack.pop()
+            if node:
+                if visited:
+                    ans.append(node.val)
+                else:
+                    stack.append((node.right, False))
+                    stack.append((node, True))
+                    stack.append((node.left, False))
+        return ans[-1]
