@@ -75,7 +75,9 @@ class Linked_list:
 
     def delete_from_last(self):
         cur = self.head
-
+        if cur.next is None:
+            print("List is Empty, cannot delete!")
+            return
         while cur.next.next != None:
             cur = cur.next
         print(f"Element {cur.next.data} is removed from end")
