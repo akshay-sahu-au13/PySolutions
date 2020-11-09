@@ -6,7 +6,7 @@ class Solution:
 
       # """
       # Dictionaries are a convenient way to store data for later retrieval by name (key).
-      # A defaultdict works exactly like a normal dict, but it is initialized with a unction (“default factory”)
+      # A defaultdict works exactly like a normal dict, but it is initialized with a function (“default factory”)
       # f that takes no arguments and provides the default value for a nonexistent key. A defaultdict will never raise a KeyError.
 ########Refer : https://www.geeksforgeeks.org/defaultdict-in-python/ ############
         d = defaultdict(list)
