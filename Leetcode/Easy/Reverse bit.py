@@ -24,3 +24,16 @@ class Solution:
         
         rev += "0" * (32-len(rev))
         return int(rev,2)
+
+### Another approach ###
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        i = 0
+        rev = 0
+        while i < 31:
+            bit = n & 1
+            rev = rev | bit
+            n >>= 1
+            rev <<= 1
+            i += 1
+        return rev
