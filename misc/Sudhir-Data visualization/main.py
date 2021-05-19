@@ -22,6 +22,8 @@
 # workbook.close()
 
 #############################################################################
+from threading import Timer
+
 import xlsxwriter
 workbook = xlsxwriter.Workbook('c:\\temp\\Welocme.xlsx')
 worksheet = workbook.add_worksheet()
@@ -38,9 +40,16 @@ data = (
     ['Rohan','Bank Manager'], 
     ['Akshay','Bank Officer']
 ) 
+
+
  
 for name, score in (data): 
-    worksheet.write(row, col, name) 
-    worksheet.write(row, col + 1, score) 
+    worksheet.write(row, col, name)
+    r = Timer(1.0, worksheet.write, (row, col, name) ) 
+    r.start()
+
+    worksheet.write(row, col + 1, score)
+    s = Timer(1.0, worksheet.write, (row, col + 1, score) )
+    s.start()
     row += 1
 workbook.close()
