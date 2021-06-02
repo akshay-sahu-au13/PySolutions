@@ -29,6 +29,15 @@ def sortArray(arr):
 			arr[mid], arr[right] = arr[right], arr[mid]
 			right = right - 1
 	return arr
+
+if __name__ == "__main__":
+	
+    # arr = [0, 1, 2, 0, 1, 2]
+    arr = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
+
+    arr = sortArray( arr)
+    print(arr)
+
 	
 
 
